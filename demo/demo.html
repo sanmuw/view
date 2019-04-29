@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>svg</title>
+    <script src="../js/"></script>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="./svg3dtagcloud.min.js"></script>
+    <style>
+        #tag-cloud{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="tag-cloud"></div>
+    <script>
+        var entries = [
+            { label: 'sanmu', url: '', target: '_Blank' },
+            { label: '', url: '', target: '_Blank' },
+            { label: 'nstl', url: '', target: '_Blank' },
+            { label: 'nstl', url: '', target: '_Blank' },
+            { label: '鉴定规则', url: '', target: '_Blank' }
+        ];
+        var settings = {
+            entries: entries,
+            width: 640,
+            height: 480,
+            radius: '65%',
+            radiusMin: 75,
+            bgDraw: false,
+            opacityOver: 1.00,
+            opacityOut: 0.05,
+            opacitySpeed: 6,
+            fov: 800,
+            speed: 0.5,
+            fontFamily: 'Oswald, Arial, sans-serif',
+            fontSize: '15',
+            fontColor: '#009688',
+            fontWeight: 'normal',
+            fontStyle: 'normal',
+            fontStretch: 'normal',
+            fontToUpperCase: true
+        };
+        $( '#tag-cloud' ).svg3DTagCloud( settings );
+    </script>
+</body>
+</html>
